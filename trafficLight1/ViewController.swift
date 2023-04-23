@@ -26,6 +26,11 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func changeButtonTapped() {
+        
+        if changeLightButton.currentTitle == "Start" {
+            changeLightButton.setTitle("Next", for: .normal)
+        }
+        
         if statusLight == "red" {
             redLabel.alpha = 1
             yellowLabel.alpha = 0.3
@@ -42,9 +47,8 @@ final class ViewController: UIViewController {
             greenLabel.alpha = 1
             statusLight = "red"
         }
-        
-    changeLightButton.setTitle("Next", for: .normal)
-
     }
+    
+        
 }
 
